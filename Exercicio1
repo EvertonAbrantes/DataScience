@@ -1,0 +1,12 @@
+import pandas as pd
+
+df = pd.read_csv('notas.csv')
+
+print("Os 12 primeiros registros:")
+print(df.head(12))
+
+print("\nOs 6 últimos registros:")
+print(df.tail(6))
+
+print("\nTamanho da massa de dados:")
+print(df.shape[0])
