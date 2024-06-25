@@ -1,0 +1,15 @@
+import pandas as pd
+
+df = pd.read_csv('notas.csv')
+
+filme = df[df['ID'] == 32]
+
+if not filme.empty:
+    nota = filme['nota'].values[0]
+    nome = filme['nome'].values[0]
+    if nota > 3:
+        print(f"O filme '{nome}' é bom com nota {nota}.")
+    else:
+        print(f"O filme '{nome}' não é considerado bom com nota {nota}.")
+else:
+    print("Filme com ID=32 não encontrado.")
